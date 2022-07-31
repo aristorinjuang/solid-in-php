@@ -18,7 +18,7 @@ class Rectangle implements NonEquilateral {
     return $this->length * $this->width;
   }
 
-  public function circumference(): float {
+  public function perimeter(): float {
     return 2 * ($this->length + $this->width);
   }
 }

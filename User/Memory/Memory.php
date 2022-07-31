@@ -9,7 +9,7 @@ use Shape\Shape;
 class Memory implements Repository {
   private array $shapes;
   private array $shapeAreas;
-  private array $shapeCircumferences;
+  private array $shapePerimeters;
 
   public function addShape(User $u, Shape $s): void {
     $this->shapes[$u->id][] = $s;
@@ -17,10 +17,10 @@ class Memory implements Repository {
       $this->shapeAreas[$u->id] = 0;
     }
     $this->shapeAreas[$u->id] += $s->area();
-    if (empty($this->shapeCircumferences[$u->id])) {
-      $this->shapeCircumferences[$u->id] = 0;
+    if (empty($this->shapePerimeters[$u->id])) {
+      $this->shapePerimeters[$u->id] = 0;
     }
-    $this->shapeCircumferences[$u->id] += $s->circumference();
+    $this->shapePerimeters[$u->id] += $s->perimeter();
   }
 
   public function shapes(User $u): array {
@@ -31,7 +31,7 @@ class Memory implements Repository {
     return $this->shapeAreas[$u->id];
   }
 
-  public function shapeCircumferences(User $u): float {
-    return $this->shapeCircumferences[$u->id];
+  public function shapePerimeters(User $u): float {
+    return $this->shapePerimeters[$u->id];
   }
 }

@@ -4,5 +4,5 @@ namespace Shape;
 
 interface Shape {
   public function area(): float;
-  public function circumference(): float;
+  public function perimeter(): float;
 }

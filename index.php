@@ -34,7 +34,7 @@ $s3 = new Rectangle();
 $s3->setA(6);
 $s3->setB(7);
 echo '$s3->area() ' . $s3->area() . PHP_EOL;
-echo '$s3->circumference() ' . $s3->circumference() . PHP_EOL;
+echo '$s3->perimeter() ' . $s3->perimeter() . PHP_EOL;
 
 $u2 = new Member($db);
 $u2->addShape($s1);
@@ -43,5 +43,5 @@ $u2->addShape($s3);
 
 echo '$u2->averageShapeArea() ' . $u2->averageShapeArea() . PHP_EOL;
 echo '$u2->shapeAreas() ' . $u2->shapeAreas() . PHP_EOL;
-echo '$u2->averageShapeCircumference() ' . $u2->averageShapeCircumference() . PHP_EOL;
-echo '$u2->shapeCircumferences() ' . $u2->shapeCircumferences() . PHP_EOL;
+echo '$u2->averageShapePerimeter() ' . $u2->averageShapePerimeter() . PHP_EOL;
+echo '$u2->shapePerimeters() ' . $u2->shapePerimeters() . PHP_EOL;

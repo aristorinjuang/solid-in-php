@@ -10,11 +10,11 @@ class Member extends Guest implements PremiumUser {
     parent::__construct($repo);
   }
 
-  public function shapeCircumferences(): float {
-    return $this->repo->shapeCircumferences($this);
+  public function shapePerimeters(): float {
+    return $this->repo->shapePerimeters($this);
   }
 
-  public function averageShapeCircumference(): float {
-    return $this->repo->shapeCircumferences($this) / count($this->repo->shapes($this));
+  public function averageShapePerimeter(): float {
+    return $this->repo->shapePerimeters($this) / count($this->repo->shapes($this));
   }
 }

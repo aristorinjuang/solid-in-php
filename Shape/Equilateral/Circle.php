@@ -13,7 +13,7 @@ class Circle implements Equilateral {
     return pi() * pow($this->radius, 2);
   }
 
-  public function circumference(): float {
+  public function perimeter(): float {
     return 2 * pi() * $this->radius;
   }
 }

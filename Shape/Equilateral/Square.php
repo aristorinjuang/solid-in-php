@@ -13,7 +13,7 @@ class Square implements Equilateral {
     return pow($this->side, 2);
   }
 
-  public function circumference(): float {
+  public function perimeter(): float {
     return 4 * $this->side;
   }
 }
